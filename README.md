@@ -22,3 +22,17 @@ proto:
   
   npm install
   npx webpack client.js
+  
+  для запуска клиента запускаем http сервер из директории клиента:
+  
+  python3 -m http.server 8081
+  
+  запуск envoy из docker образа:
+  
+  docker build -t my-envoy:1.0 .
+  docker run -d -p 8080:8080 -p 9901:9901  my-envoy:1.0
+  
+  go run server.go
+  
+  доступ по адресу:
+  http://localhost:8081 
